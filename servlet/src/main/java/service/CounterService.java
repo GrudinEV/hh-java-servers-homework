@@ -14,10 +14,10 @@ public class CounterService {
         count++;
     }
 
-    public int substructionCount(int subtractionValue) {
-        int factSubstractionValue = Math.min(subtractionValue, count);
-        count -= factSubstractionValue;
-        return factSubstractionValue;
+    public int subtractionCount(int subtractionValue) {
+        int factSubtractionValue = Math.min(subtractionValue, count);
+        count -= factSubtractionValue;
+        return factSubtractionValue;
     }
 
     public void clearCounter() {

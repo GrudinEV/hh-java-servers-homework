@@ -15,10 +15,9 @@ public class ServletApplication {
     server.setConnectors(new Connector[] {connector});
     ServletHandler servletHandler = new ServletHandler();
     server.setHandler(servletHandler);
-
     servletHandler.addServletWithMapping(CounterServlet.class, "/counter");
     servletHandler.addServletWithMapping(ClearCounterServlet.class, "/counter/clear");
-
     server.start();
+    server.join();
   }
 }

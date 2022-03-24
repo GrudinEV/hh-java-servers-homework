@@ -22,7 +22,7 @@ public class ClearCounterServlet extends HttpServlet {
                     .ifPresent(cookie -> {
                         try {
                             service.clearCounter();
-                            resp.setContentType("application/json");
+                            resp.setContentType("text/plain");
                             resp.setStatus(HttpServletResponse.SC_OK);
                             resp.getWriter().print("Count cleared");
                         } catch (IOException e) {
